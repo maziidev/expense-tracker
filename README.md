@@ -302,7 +302,7 @@ Response `201`:
 {
   "id": 0,
   "title": "string",
-  "amount": 1.00,
+  "amount": 1.0,
   "date": "2026-05-03",
   "note": "string",
   "category_id": 0,
@@ -328,7 +328,7 @@ Response `200`:
 {
   "id": 0,
   "title": "string",
-  "amount": 1.00,
+  "amount": 1.0,
   "date": "2026-05-03",
   "note": "string",
   "category_id": 0,
@@ -367,7 +367,7 @@ Response `200`:
 {
   "id": 0,
   "title": "string",
-  "amount": 1.00,
+  "amount": 1.0,
   "date": "2026-05-03",
   "note": "string",
   "category_id": 0,
@@ -404,9 +404,9 @@ Response `200`:
 
 ```json
 {
-  "total_this_month": 0.00,
-  "total_last_month": 0.00,
-  "total_all_time": 0.00,
+  "total_this_month": 0.0,
+  "total_last_month": 0.0,
+  "total_all_time": 0.0,
   "expense_count_this_month": 0,
   "highest_category": "string"
 }
@@ -423,7 +423,7 @@ Response `200`:
   {
     "category_id": 0,
     "category_name": "string",
-    "total": 0.00,
+    "total": 0.0,
     "count": 0
   }
 ]
@@ -461,20 +461,24 @@ Response `200`:
 ## Schemas
 
 ### `UserCreate`
+
 - `username`: string, 3–50 characters
 - `email`: valid email address
 - `password`: string, minimum 8 characters
 
 ### `UserUpdate`
+
 - `username`: string, 3–50 characters
 - `email`: valid email address
 - `password`: optional string, minimum 8 characters
 
 ### `CategoryCreate` / `CategoryUpdate`
+
 - `name`: string, 1–100 characters
 - `description`: optional string, up to 255 characters
 
 ### `ExpenseCreate` / `ExpenseUpdate`
+
 - `title`: string, 1–255 characters
 - `amount`: decimal greater than `0`, with two decimal places
 - `date`: ISO date string, `YYYY-MM-DD`
@@ -482,6 +486,7 @@ Response `200`:
 - `category_id`: optional integer
 
 ### `ExpenseResponse`
+
 - `id`: integer
 - `title`: string
 - `amount`: decimal
@@ -491,6 +496,7 @@ Response `200`:
 - `created_at`: timestamp
 
 ### `AnalyticsSummary`
+
 - `total_this_month`: decimal
 - `total_last_month`: decimal
 - `total_all_time`: decimal
@@ -498,6 +504,7 @@ Response `200`:
 - `highest_category`: optional string
 
 ### `CategorySummary`
+
 - `category_id`: integer or null
 - `category_name`: string or null
 - `total`: decimal
