@@ -33,13 +33,13 @@ source .venv/bin/activate
 2. Install dependencies:
 
 ```bash
-pip install -e .
+uv install
 ```
 
 3. Start the application:
 
 ```bash
-uvicorn app.main:app --reload
+uv run uvicorn app.main:app --reload
 ```
 
 4. Visit the docs:
